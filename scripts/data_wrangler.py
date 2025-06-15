@@ -95,9 +95,9 @@ def normalize_data(df, columns):
 
 def save_file(df, output_fname):
     if os.path.exists(output_fname):
-        confirm = input(Fore.LIGHTYELLOW_EXYELLOW +f"Warning: The file '{output_fname}' already exists. Do you want to overwrite it? (y/n): ")
+        confirm = input(Fore.LIGHTYELLOW_EX +f"Warning: The file '{output_fname}' already exists. Do you want to overwrite it? (y/n): ")
         if confirm.lower() != 'y':
-            print(Fore.LIGHTYELLOW_EXYELLOW + "File not saved.")
+            print(Fore.LIGHTYELLOW_EX + "File not saved.")
             return
     
     df.to_csv(output_fname, index=False)
